@@ -37,10 +37,7 @@ def index():
                 admincount = admincount,
                 ownercount = ownercount
             )
-
-            return render_template("index.html", identification=user_json["username"], avatar_url=avatar_url, servercount=len(guilds_json))
-            return f"{user_json['username']} is in a total of {str(len(guilds_json))} servers"
-
+            
     return redirect(BASE)
 
 
