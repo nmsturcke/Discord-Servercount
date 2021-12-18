@@ -42,8 +42,58 @@ def configErrors(errors: list = []) -> None:
         return
 
     path = os.path.abspath("./Main/config/config.json")
-    text = f"You need to update the following values in the {crayons.magenta(str(path))} file: " + ", ".join(error for error in errors) + crayons.cyan("\n\nUpdate the file and try to run the script again.")
+    text = crayons.red(f"[ERROR] You need to update the follwing values in the {path} file: " + crayons.white(", ".join(error for error in errors)) + crayons.cyan("\n\nUpdate the file and run the script again."))
 
     print(text)
     exit()
+
+def adminPerms(guilds: list = []) -> int:
+    """
+    Returns the amount of guilds you have admin perms in.
     
+    :param guilds: The guilds json response
+    :type guilds: list
+    :returns: int
+    """
+
+    t = 0
+
+    for g in guilds:
+        if g["permissions_new"] == "2199023255551":
+            t += 1
+
+    return t
+
+def owner(guilds: list = []) -> int:
+    """
+    Returns the amount of guilds you are owner in.
+    
+    :param guilds: The guilds json response
+    :type guilds: list
+    :returns: int
+    """
+
+    t = 0
+
+    for g in guilds:
+        if g["owner"] == True:
+            t += 1
+
+    return t
+
+# def owner(guilds: list = []) -> int:
+#     """
+#     Returns the amount of guilds you are owner in.
+    
+#     :param guilds: The guilds json response
+#     :type guilds: list
+#     :returns: int
+#     """
+
+#     t = 0
+
+#     for g in guilds:
+#         if g["owner"] == True:
+#             t += 1
+
+#     return t
