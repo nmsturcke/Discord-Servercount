@@ -16,4 +16,4 @@ With this script you can check the amount of servers you are in, along with stat
 
 > Check out your statistics!
 
-# Support me by starring!
+# Support me by starring & sharing!
