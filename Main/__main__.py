@@ -45,6 +45,5 @@ def index():
 
 
 if __name__ == "__main__":
-    # configErrors(checkConfig())
-    # app.run(host="0.0.0.0", port=13337)
+    configErrors(checkConfig())
     app.run(port=13337, debug=True)
