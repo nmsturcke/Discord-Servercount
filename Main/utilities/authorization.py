@@ -5,7 +5,7 @@ class Oauth(object):
     client_id = str(getConfig()["application_id"])
     client_secret = str(getConfig()["client_secret"])
     scope = "identify%20guilds"
-    redirect_uri = "http://127.0.0.1:13337"
+    redirect_uri = "http://127.0.0.1:13337/"
     discord_token_url = "https://discord.com/api/oauth2/token"
     discord_api_url = "https://discord.com/api"
 

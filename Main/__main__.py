@@ -6,7 +6,7 @@ from Main.utilities import *
 
 app = Flask(__name__)
 
-BASE =f"https://discord.com/api/oauth2/authorize?client_id={getConfig()['application_id']}&redirect_uri=http%3A%2F%2F127.0.0.1%3A13337&response_type=code&scope=identify%20guilds"
+BASE =f"https://discord.com/api/oauth2/authorize?client_id={getConfig()['application_id']}&redirect_uri=http%3A%2F%2F127.0.0.1%3A13337%2F&response_type=code&scope=identify%20guilds"
 
 @app.route("/", methods=["GET"])
 def index():
