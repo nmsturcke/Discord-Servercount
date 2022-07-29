@@ -1,6 +1,6 @@
 # Discord-Servercount
  
-With this script you can check the amount of servers you are in, along with statistics of how many servers you are owner in and in how many servers you have administrator permissions!
+With this script you can check the amount of servers you are in, along with statistics of how many servers you are owner in, how many servers you have administrator permissions and in how many you have moderator permissions (manage messages permissions is considered for the latter)!
 
 # How to use
 
