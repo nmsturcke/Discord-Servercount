@@ -213,6 +213,8 @@ html {
     justify-content: center;
     transform: translate(0, -50%)
   }
+
 footer {
+    border-top: 1px solid whitesmoke;
     margin-bottom: 10px;
 }

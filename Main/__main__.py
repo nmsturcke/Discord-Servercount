@@ -25,6 +25,7 @@ def index():
             user_id = user_json["id"]
             avatar_url = f"https://cdn.discordapp.com/avatars/{user_json['id']}/{user_json['avatar']}"
 
+            modcount = moderator(guilds_json)
             admincount = adminPerms(guilds_json)
             ownercount = owner(guilds_json)
 
@@ -34,6 +35,7 @@ def index():
                 user_id = user_id,
                 avatar_url = avatar_url,
                 servercount = str(len(guilds_json)),
+                modcount = modcount,
                 admincount = admincount,
                 ownercount = ownercount
             )

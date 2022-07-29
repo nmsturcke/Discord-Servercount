@@ -53,13 +53,12 @@ def adminPerms(guilds: list = []) -> int:
     
     :param guilds: The guilds json response
     :type guilds: list
-    :returns: int
+    :returns int:
     """
 
     t = 0
 
     for g in guilds:
-        print(g)
         if int(g["permissions_new"]) & 8 == 8:
             t += 1
 
@@ -71,7 +70,7 @@ def owner(guilds: list = []) -> int:
     
     :param guilds: The guilds json response
     :type guilds: list
-    :returns: int
+    :returns int:
     """
 
     t = 0
@@ -82,19 +81,19 @@ def owner(guilds: list = []) -> int:
 
     return t
 
-# def owner(guilds: list = []) -> int:
-#     """
-#     Returns the amount of guilds you are owner in.
+def moderator(guilds: list = []) -> int:
+    """
+    Returns the amount of guilds you are moderator in, checking for Manage Messages permission.
     
-#     :param guilds: The guilds json response
-#     :type guilds: list
-#     :returns: int
-#     """
+    :param guilds: The guilds json response
+    :type guilds: list
+    :returns int:
+    """
 
-#     t = 0
+    t = 0
 
-#     for g in guilds:
-#         if g["owner"] == True:
-#             t += 1
-
-#     return t
+    for g in guilds:
+        if int(g["permissions_new"]) & 13 == 13:
+            t += 1
+    
+    return t
