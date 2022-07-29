@@ -59,7 +59,8 @@ def adminPerms(guilds: list = []) -> int:
     t = 0
 
     for g in guilds:
-        if g["permissions_new"] == "2199023255551":
+        print(g)
+        if int(g["permissions_new"]) & 8 == 8:
             t += 1
 
     return t
